@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_below="@id/purchase_txt"
+        android:id="@+id/lay"
+        android:background="@drawable/custom_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/itemlist_burger"
+            android:background="@drawable/custom_border"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:paddingHorizontal="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Burger"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/itemlist_Quantity"
+            android:textAlignment="center"
+            android:background="@drawable/custom_border"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="fill_parent"
+            android:text="2"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/itemlist_Amount"
+            android:background="@drawable/custom_border"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:text="500"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+

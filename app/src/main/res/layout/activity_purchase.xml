@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Purchase_Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--HEADER-->
+            <RelativeLayout
+        android:id="@+id/main_lay1"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:layout_height="?actionBarSize">
+        <!--HOME BUTTON-->
+        <LinearLayout
+            android:id="@+id/Purchase_Home"
+            android:onClick="onClick"
+            android:layout_alignParentLeft="true"
+            android:layout_marginHorizontal="5dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_home"
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"/>
+        <!--SUMMARY BUTTON-->
+        <LinearLayout
+            android:id="@+id/Purchase__Summary"
+            android:onClick="onClick"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_summary"
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUMMARY"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+        <!--BODY-->
+            <RelativeLayout
+            android:layout_below="@id/main_lay1"
+            android:id="@+id/main_lay2"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+>
+            <!--HEADING-->
+            <TextView
+                android:id="@+id/purchase_txt"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purchase Summary"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textAlignment="center"/>
+
+            <!--HEAD-->
+            <LinearLayout
+                android:layout_below="@id/purchase_txt"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lay"
+                android:background="@drawable/custom_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:padding="10dp"
+                    android:background="@drawable/custom_border"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Burger"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:background="@drawable/custom_border"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:padding="10dp"
+                    android:background="@drawable/custom_border"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+            <!--RV-->
+            <android.support.v7.widget.RecyclerView
+
+
+                android:layout_below="@id/lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Purchase_RV"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_lay2"
+            android:layout_alignParentBottom="true"
+            >
+
+            <!--DISCOUNT -->
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:id="@+id/lay1"
+                android:background="@drawable/custom_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_border"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Discount"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/Purchase_DisTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
+                    android:text="50%"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <!--Total-->
+            <LinearLayout
+                android:background="@drawable/custom_border"
+                android:layout_below="@id/lay1"
+                android:id="@+id/lay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@drawable/custom_border"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/Purchase_PriceTV"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:text="50000"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <!--BOTTOM-->
+            <Button
+                android:id="@+id/Purchase_btn"
+                android:onClick="onClick"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/lay2"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_buttons"
+                android:text="Take A New Order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:paddingHorizontal="20dp"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
+

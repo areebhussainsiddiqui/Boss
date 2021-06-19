@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <!--HEADER-->
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:background="@color/colorAccent"
+           android:layout_height="?actionBarSize">
+      <!--HOME BUTTON-->
+           <LinearLayout
+               android:id="@+id/Main_Home"
+               android:onClick="onClick"
+               android:layout_alignParentLeft="true"
+               android:layout_marginHorizontal="5dp"
+               android:gravity="center_vertical"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+               <ImageView
+
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/icon_home"
+                   />
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="HOME"
+                   android:textAlignment="center"
+                   android:textSize="12sp"
+                   android:textColor="@color/white"/>
+           </LinearLayout>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/app_name"
+               android:textColor="@color/white"
+               android:textSize="40dp"
+               android:fontFamily="sans-serif-black"
+               android:gravity="center_horizontal"
+               android:layout_centerInParent="true"/>
+      <!--SUMMARY BUTTON-->
+           <LinearLayout
+               android:id="@+id/Main_Summary"
+               android:onClick="onClick"
+               android:layout_alignParentRight="true"
+               android:layout_marginHorizontal="10dp"
+               android:gravity="center_vertical"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+               <ImageView
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/icon_summary"
+                   />
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="SUMMARY"
+                   android:textAlignment="center"
+                   android:textSize="12sp"
+                   android:textColor="@color/white"/>
+           </LinearLayout>
+       </RelativeLayout>
+       <!--MENU-->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:layout_marginTop="5dp"
+               android:paddingHorizontal="10dp"
+               android:textSize="13dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="ORDER"
+               android:textColor="@color/black"
+               android:fontFamily="@font/montserrat"/>
+           <GridLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:columnCount="2"
+               android:rowCount="2"
+               android:alignmentMode="alignMargins"
+               android:columnOrderPreserved="false"
+               android:layout_marginHorizontal="20dp">
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_rowWeight="1"
+                   android:layout_margin="16dp"
+                   app:cardCornerRadius="20dp">
+                   <LinearLayout
+
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <ImageView
+                           android:id="@+id/main_burger1"
+                           android:onClick="onClick"
+
+                           android:layout_width="match_parent"
+                           android:layout_height="90dp"
+                           android:src="@drawable/burger1"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/Burger1"
+                           android:textAlignment="center"
+                           android:fontFamily="@font/montserrat"
+                           android:textColor="@color/black"/>
+                       <LinearLayout
+                           android:paddingTop="2dp"
+                           android:gravity="center_horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:id="@+id/Main_add_b1"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_add"/>
+                           <TextView
+                               android:id="@+id/Main_count_b1"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:text="0"
+                               android:gravity="center"
+                               android:fontFamily="@font/montserrat"
+                               android:textColor="@color/black"
+                               android:layout_marginHorizontal="10dp"/>
+                           <ImageView
+                               android:id="@+id/Main_remove_b1"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_remove"/>
+                       </LinearLayout>
+
+
+                   </LinearLayout>
+               </android.support.v7.widget.CardView>
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_rowWeight="1"
+                   app:cardCornerRadius="20dp"
+                   android:layout_margin="16dp">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <ImageView
+                           android:onClick="onClick"
+                           android:id="@+id/main_burger2"
+
+                           android:layout_width="match_parent"
+                           android:layout_height="90dp"
+                           android:src="@drawable/burger2"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/Burger2"
+                           android:textAlignment="center"
+                           android:fontFamily="@font/montserrat"
+                           android:textColor="@color/black"/>
+                       <LinearLayout
+                           android:paddingTop="2dp"
+                           android:gravity="center_horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:id="@+id/Main_add_b2"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_add"/>
+                           <TextView
+                               android:id="@+id/Main_count_b2"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:text="0"
+                               android:gravity="center"
+                               android:fontFamily="@font/montserrat"
+                               android:textColor="@color/black"
+                               android:layout_marginHorizontal="10dp"/>
+                           <ImageView
+                               android:id="@+id/Main_remove_b2"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_remove"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+               </android.support.v7.widget.CardView>
+
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   app:cardCornerRadius="20dp"
+                   android:layout_margin="16dp"
+                   android:layout_rowWeight="1" >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <ImageView
+                           android:id="@+id/main_burger3"
+                           android:onClick="onClick"
+
+                           android:layout_width="match_parent"
+                           android:layout_height="90dp"
+                           android:src="@drawable/burger3"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/Burger3"
+                           android:textAlignment="center"
+                           android:fontFamily="@font/montserrat"
+                           android:textColor="@color/black"/>
+                       <LinearLayout
+                           android:paddingTop="2dp"
+                           android:gravity="center_horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:id="@+id/Main_add_b3"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_add"/>
+                           <TextView
+                               android:id="@+id/Main_count_b3"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:text="0"
+                               android:gravity="center"
+                               android:fontFamily="@font/montserrat"
+                               android:textColor="@color/black"
+                               android:layout_marginHorizontal="10dp"/>
+                           <ImageView
+                               android:id="@+id/Main_remove_b3"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_remove"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+               </android.support.v7.widget.CardView>
+
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="0dp"
+                   android:layout_height="0dp"
+                   android:layout_columnWeight="1"
+                   android:layout_rowWeight="1"
+                   app:cardCornerRadius="20dp"
+                   android:layout_margin="16dp">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <ImageView
+                           android:id="@+id/main_burger4"
+                           android:onClick="onClick"
+
+                           android:layout_width="match_parent"
+                           android:layout_height="90dp"
+                           android:src="@drawable/burger4"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/Burger4"
+                           android:textAlignment="center"
+                           android:fontFamily="@font/montserrat"
+                           android:textColor="@color/black"/>
+                       <LinearLayout
+                           android:paddingTop="2dp"
+                           android:gravity="center_horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <ImageView
+                               android:id="@+id/Main_add_b4"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_add"/>
+                           <TextView
+                               android:id="@+id/Main_count_b4"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="match_parent"
+                               android:text="0"
+                               android:gravity="center"
+                               android:fontFamily="@font/montserrat"
+                               android:textColor="@color/black"
+                               android:layout_marginHorizontal="10dp"/>
+                           <ImageView
+                               android:id="@+id/Main_remove_b4"
+                               android:onClick="onClick"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/icon_remove"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+               </android.support.v7.widget.CardView>
+           </GridLayout>
+
+       </LinearLayout>
+
+<RelativeLayout
+    android:layout_marginHorizontal="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_marginHorizontal="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUMMARY"
+            android:fontFamily="@font/montserrat_bold"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border">
+            <TextView
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="BURGER"/>
+            <TextView
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="QUANTITY"/>
+
+        </LinearLayout>
+<LinearLayout
+    android:paddingVertical="5dp"
+    android:background="@drawable/custom_border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="After Workout Burger"/>
+        <TextView
+            android:id="@+id/Q_B1"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Big Fat Burger"/>
+        <TextView
+            android:id="@+id/Q_B2"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Meal Burger"/>
+        <TextView
+            android:id="@+id/Q_B3"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Boring Burger"/>
+        <TextView
+            android:id="@+id/Q_B4"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/Main_RV"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border" />
+-->
+    </LinearLayout>
+
+
+</RelativeLayout>
+       <LinearLayout
+           android:paddingVertical="10dp"
+           android:layout_marginHorizontal="5dp"
+           android:layout_alignParentBottom="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <Button
+               android:layout_marginHorizontal="20dp"
+               android:id="@+id/btn_Discount"
+               android:onClick="onClick"
+               android:background="@drawable/custom_buttons"
+               android:layout_alignParentLeft="true"
+               android:layout_width="wrap_content"
+               android:padding="5dp"
+               android:layout_weight="1"
+               android:fontFamily="@font/montserrat_bold"
+               android:textColor="@color/white"
+               android:layout_height="wrap_content"
+               android:text="Discount Purchase"/>
+           <Button
+
+               android:layout_marginHorizontal="20dp"
+               android:id="@+id/btn_Normal"
+               android:layout_weight="1"
+               android:onClick="onClick"
+               android:background="@drawable/custom_buttons"
+               android:layout_alignParentRight="true"
+               android:layout_width="wrap_content"
+               android:padding="10dp"
+               android:fontFamily="@font/montserrat_bold"
+               android:textColor="@color/white"
+               android:layout_height="wrap_content"
+               android:text="Normal Purchase"/>
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+</ScrollView>
